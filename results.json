@@ -1,0 +1,40 @@
+{
+  "classes": [
+    "speed limit 50",
+    "yield",
+    "stop",
+    "priority road",
+    "no entry",
+    "general caution",
+    "turn right ahead",
+    "ahead only"
+  ],
+  "dataset_source": "gtsrb",
+  "num_train_images": 480,
+  "num_val_images": 120,
+  "resnet18_linear_probe": {
+    "val_accuracy": 0.8666666666666667,
+    "trainable_params": 4104,
+    "total_params": 11180616,
+    "latency_ms_per_image": 3.2598833332788972,
+    "epochs": 6
+  },
+  "clip_zero_shot": {
+    "val_accuracy": 0.5,
+    "latency_ms_per_image": 25.08233333331494,
+    "model_id": "openai/clip-vit-base-patch32"
+  },
+  "distilled_student": {
+    "val_accuracy": 0.925,
+    "total_params": 145992,
+    "latency_ms_per_image": 0.29245000005175825,
+    "epochs": 10,
+    "kd_temperature": 4.0,
+    "kd_alpha": 0.5
+  },
+  "submission_meta": {
+    "student_name": "",
+    "sid": "",
+    "notebook_version": "1.0"
+  }
+}
